@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil Facts</title>
+    <style>
+        body {
+          font-family: sans-serif;
+          margin: 0;
+          padding: 20px;
+        }
+
+        h1 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        #facts-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        p {
+          border: 1px solid #ccc;
+          padding: 10px;
+          border-radius: 5px;
+          width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts about Oil</h1>
+    <div id="facts-container"></div>
+
+    <script>
+        const factsContainer = document.getElementById('facts-container');
+        const facts = [
+          {
+            "fact": "Oil is a fossil fuel, formed over millions of years from the remains of ancient marine organisms."
+          },
+          {
+            "fact": "The first oil well was drilled in 1859 in Titusville, Pennsylvania."
+          },
+          {
+            "fact": "The largest oil reserves in the world are located in Venezuela."
+          },
+          {
+            "fact": "Oil is a major source of energy for transportation, electricity generation, and manufacturing."
+          },
+          {
+            "fact": "The United States is the world's largest oil consumer."
+          },
+          {
+            "fact": "Oil is used to make a wide range of products, including gasoline, diesel fuel, kerosene, plastics, and asphalt."
+          },
+          {
+            "fact": "The price of oil fluctuates based on supply, demand, and geopolitical factors."
+          },
+          {
+            "fact": "Oil spills can have devastating impacts on the environment."
+          },
+          {
+            "fact": "The development of renewable energy sources, such as solar and wind power, is reducing the reliance on oil."
+          },
+          {
+            "fact": "The oil industry is a major contributor to global economic activity."
+          }
+        ];
+
+        facts.forEach(fact => {
+          const factElement = document.createElement('p');
+          factElement.textContent = fact.fact;
+          factsContainer.appendChild(factElement);
+        });
+    </script>
+</body>
+</html>
